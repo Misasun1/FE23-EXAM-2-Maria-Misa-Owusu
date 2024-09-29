@@ -1,0 +1,54 @@
+*{ margin: 0;
+    padding:0;
+    box-sizing: center;
+ 
+}
+
+body{
+
+    background: rgb(195,157,34);
+    background: linear-gradient(45deg,rgb(218, 82, 14), orange, rgb(244, 218, 72), rgb(241, 241, 160));
+    
+
+}
+
+#navbar{
+    background-color: rgba(189, 171, 66, 0.779);
+}
+
+
+img {
+height: 340px;
+object-fit: cover;
+
+}
+
+#flowers-background{
+    height: 300px;
+    
+}
+
+/* overlay writing */
+
+.image-container {
+position: relative;
+animation-delay: 0.7s;
+
+}
+
+.heading {
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 35px;
+    position: absolute;
+    color: antiquewhite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.material-symbols-outlined:hover{
+color:rgba(255, 183, 0, 0.742);
+}

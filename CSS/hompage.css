@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: rgb(229,73,174);
+background: radial-gradient(circle, rgba(229,73,174,0.9069148936170213) 19%, rgba(252,103,70,1) 97%);
+}
+
+h1 {
+    
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: blanchedalmond;
+        text-shadow:     0px 0px 10px rgb(222, 62, 147),
+                         0px 0px 20px rgb(222, 62, 147),
+                         0px 0px 40px rgb(222, 62, 147),
+                         0px 0px 80px rgb(222, 62, 147);
+   
+}
+
+
+h5{
+    color: white;
+   text-shadow:     0px 0px 10px rgb(222, 62, 147),
+                    0px 0px 20px rgb(222, 62, 147),
+                    0px 0px 40px rgb(222, 62, 147),
+                    0px 0px 80px rgb(222, 62, 147);
+
+}
+
+
+p{
+    color: white;
+   text-shadow:     0px 0px 10px rgb(229, 121, 155),
+                    0px 0px 20px rgb(229, 121, 155),
+                    0px 0px 40px rgb(229, 121, 155),
+                    0px 0px 80px rgb(229, 121, 155);
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
