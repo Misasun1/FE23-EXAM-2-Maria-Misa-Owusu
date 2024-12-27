@@ -78,11 +78,14 @@ let itemsShopping = [
     deadline: "29/09/2024",
   },
 ];
+  
 
 // console.log(items); array displayed test worked
-
+document.getElementById("container-list").innerHTML = "";
 // displaying items with for loop
 for (const item of itemsShopping) {
+  
+
   document.getElementById("container-list").innerHTML += `
    <div>
   <div class="card bg-warning-subtle  text-danger text-opacity-75 my-4 pt-4 ">
@@ -142,15 +145,76 @@ priorityBtn.forEach((btn, index) => {
   });
 });
 
-// it works in console but not displayable :(
 
+
+
+// Function to sort items by the highest importance and to display them
 function sortBtnAscending() {
-  itemsShopping.sort((a, b) => {
-    return a.importance - b.importance;
+  // itemsShopping.sort((a, b) => a.importance - b.importance);
+  itemsShopping.sort((a, b) => b.importance - a.importance);
+
+  document.getElementById("container-list").innerHTML = "";
+
+
+  for (const item of itemsShopping) {
+    document.getElementById("container-list").innerHTML += `
+      <div>
+        <div class="card bg-warning-subtle text-danger text-opacity-75 my-4 pt-4" style="height: 45rem;">
+          <div class="d-inline-flex justify-content-end pe-3 pb-3">
+            <span class="material-symbols-outlined my-0">bookmark_add</span>
+            <span class="material-symbols-outlined">more_vert</span>
+          </div>
+          <img src="./images/${item.image}" class="card-img-top" alt="${item.itemName}">
+          <div class="card-body">
+            <h5 class="card-title">${item.itemName}</h5>
+            <p class="card-text">${item.description}</p>
+            <hr>
+            <span>
+              <p class="card-text">Priority level: <button class="btn btn-success opacity-75 text-light priorityBtn">${item.importance}</button></p>
+            </span>
+            <br>
+            <p class="card-text">Deadline: ${item.deadline}</p>
+            <hr>
+            <button class="btn btn-danger opacity-75 text-light deleteBtn">Delete</button>
+            <button class="btn btn-warning opacity-75 text-light doneBtn">Done</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+
+  attachPriorityButtonListeners();
+}
+
+// Function to attach event listeners to priority buttons
+function attachPriorityButtonListeners() {
+  let priorityBtn = document.querySelectorAll(".priorityBtn");
+
+  priorityBtn.forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+      if (itemsShopping[index].importance < 5) {
+        itemsShopping[index].importance++;
+        document.querySelectorAll(".priorityBtn")[index].innerHTML = itemsShopping[index].importance;
+      }
+
+      if (itemsShopping[index].importance >= 4) {
+        document.querySelectorAll(".priorityBtn")[index].classList.add("bg-danger");
+      } else if (itemsShopping[index].importance >= 2) {
+        document.querySelectorAll(".priorityBtn")[index].classList.add("bg-warning");
+      } else {
+        document.querySelectorAll(".priorityBtn")[index].classList.remove("bg-danger", "bg-warning");
+      }
+    });
   });
 }
+
+// Initial display of items
 sortBtnAscending();
-// console.log(itemsShopping);
+
+
+
+
 
 // sweet alert connection to button subscribe
 
