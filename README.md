@@ -1,11 +1,11 @@
 
 
- <img src="./images/PLANNER.png" alt="Banner" >
+ <img src="./images/PLANNER.png" alt="Banner" width="800" height="400">
 
 
 # List Planner
 
-Create a list of Tasks for Shopping List website. The information should be stored in arrray.
+Create a list of Tasks for a Shopping List website. The information should be stored in arrray.
 
 1. Ensure structured code identation.
 2. Use bootstrap classes to implement responsiveness in the container that holds the Tasks' cards. On larger screen should have 3 columns in a row, for medium screens 2 columns and for smaller screens 1 column.
