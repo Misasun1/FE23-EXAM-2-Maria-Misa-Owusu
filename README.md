@@ -1,7 +1,6 @@
 
 
- <img src="./images/PLANNER.png" alt="Banner" width="800" height="400">
-
+ <img src="./images/PLANNER.png" alt="Banner" width="800" height="300">
 
 # List Planner
 
