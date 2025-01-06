@@ -2,7 +2,7 @@
 
  <img src="./images/PLANNER.png" alt="Banner" width="800" height="300">
 
-# List Planner
+# TASK DESCRIPTION:
 
 Create a list of Tasks for a Shopping List website. The information should be stored in arrray.
 
